@@ -2,11 +2,6 @@ import { createFileRoute } from "@tanstack/react-router";
 import { useEffect, useRef, useState, type ReactNode } from "react";
 import { Mail, Phone, Github, Linkedin, ArrowUpRight, GraduationCap, Award, MapPin } from "lucide-react";
 
-import momentStudy from "@/assets/moment-study.jpg";
-import momentTeam from "@/assets/moment-team.jpg";
-import momentConvocation from "@/assets/moment-convocation.jpg";
-import momentChai from "@/assets/moment-chai.jpg";
-
 export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
@@ -50,50 +45,10 @@ const certs = [
 const stages = ["New", "Contacted", "Interested", "Follow-up", "Enrolled"];
 
 const moments = [
-  {
-    src: momentStudy,
-    w: 1024,
-    h: 1280,
-    title: "Where it started",
-    note: "A sunlit classroom and a laptop that never closed.",
-    when: "2023",
-    tilt: "-rotate-2",
-    shift: "lg:translate-y-0",
-    ratio: "aspect-[4/5]",
-  },
-  {
-    src: momentTeam,
-    w: 1280,
-    h: 1024,
-    title: "The whiteboard years",
-    note: "Sticky notes, diagrams, and a team that showed up.",
-    when: "2025",
-    tilt: "rotate-2",
-    shift: "lg:translate-y-8",
-    ratio: "aspect-[4/5]",
-  },
-  {
-    src: momentChai,
-    w: 1024,
-    h: 1280,
-    title: "Chai & code",
-    note: "Most lines written here, one cup at a time.",
-    when: "Every day",
-    tilt: "rotate-1",
-    shift: "lg:translate-y-3",
-    ratio: "aspect-[4/5]",
-  },
-  {
-    src: momentConvocation,
-    w: 1280,
-    h: 1024,
-    title: "Caps in the air",
-    note: "The evening that made the late nights make sense.",
-    when: "2026",
-    tilt: "-rotate-1",
-    shift: "lg:translate-y-10",
-    ratio: "aspect-[4/5]",
-  },
+  { no: "01", when: "2023", title: "Where it started", note: "A sunlit classroom and a laptop that never closed.", tag: "First semester" },
+  { no: "02", when: "2025", title: "The whiteboard years", note: "Sticky notes, diagrams, and a team that showed up.", tag: "Team project" },
+  { no: "03", when: "Every day", title: "Chai & code", note: "Most lines written here, one cup at a time.", tag: "Daily habit" },
+  { no: "04", when: "2026", title: "Caps in the air", note: "The evening that made the late nights make sense.", tag: "Milestone" },
 ];
 
 function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; delay?: number; className?: string }) {
@@ -313,25 +268,20 @@ function Index() {
         </ul>
       </Section>
 
-      <Section n="05" wide id="moments" title="Moments" blurb="A few frames from the journey so far — the studying, the teamwork, and the small rituals in between.">
-        <div className="grid items-start gap-10 sm:grid-cols-2 lg:grid-cols-4">
+      <Section n="05" wide id="moments" title="Moments" blurb="A few frames from the journey so far — the beginning, the teamwork, the daily habit, and the milestone that made it worth it.">
+        <div className="grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {moments.map((m, i) => (
-            <Reveal key={m.title} delay={i * 90}>
-              <figure className={`polaroid group ${m.tilt} ${m.shift} transition-transform duration-500 hover:rotate-0 hover:-translate-y-2`}>
-                <div className={`overflow-hidden bg-muted ${m.ratio}`}>
-                  <img
-                    src={m.src}
-                    alt={m.title}
-                    loading="lazy"
-                    width={m.w}
-                    height={m.h}
-                    className="h-full w-full object-cover transition-transform duration-[1200ms] ease-out group-hover:scale-[1.06]"
-                  />
+            <Reveal key={m.title} delay={i * 90} className="h-full">
+              <figure className="flex h-full flex-col rounded-2xl border border-border bg-card/70 p-6 transition duration-500 hover:-translate-y-1.5 hover:border-primary/50 hover:bg-card hover:shadow-[0_28px_55px_-32px_var(--foreground)]">
+                <div className="flex items-baseline justify-between gap-3">
+                  <span className="font-display text-4xl leading-none text-primary/70">{m.no}</span>
+                  <span className="text-[11px] uppercase tracking-[0.16em] text-muted-foreground">{m.when}</span>
                 </div>
-                <figcaption className="px-1 pb-4 pt-3">
-                  <p className="font-display text-lg leading-tight">{m.title}</p>
-                  <p className="mt-1 min-h-[3.75rem] text-xs leading-relaxed text-muted-foreground">{m.note}</p>
-                  <p className="mt-2 text-[11px] uppercase tracking-[0.16em] text-primary">{m.when}</p>
+                <div className="mt-6 h-px w-full bg-border" />
+                <figcaption className="mt-5 flex flex-1 flex-col">
+                  <p className="font-display text-xl leading-tight">{m.title}</p>
+                  <p className="mt-2 text-sm leading-relaxed text-muted-foreground">{m.note}</p>
+                  <span className="mt-auto inline-block w-fit rounded-full bg-secondary px-3 py-1 text-xs">{m.tag}</span>
                 </figcaption>
               </figure>
             </Reveal>
