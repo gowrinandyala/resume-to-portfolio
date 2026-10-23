@@ -109,7 +109,7 @@ function Index() {
     <main className="mx-auto max-w-6xl px-6">
       <div className="grain" aria-hidden="true" />
 
-      <nav className="sticky top-0 z-40 -mx-6 border-b border-border/70 bg-background/92 px-6 py-3 backdrop-blur-md">
+      <nav className="sticky top-0 z-40 -mx-6 border-b border-border/70 bg-background px-6 py-3 backdrop-blur-md">
         <div className="flex items-center justify-between text-sm">
           <a href="#top" className="font-display text-lg tracking-tight">Gowri<span className="text-primary">.</span></a>
           <div className="hidden items-center gap-8 text-muted-foreground md:flex">
@@ -268,7 +268,7 @@ function Index() {
         </ul>
       </Section>
 
-      <Section n="05" wide id="moments" title="Moments" blurb="A few frames from the journey so far — the beginning, the teamwork, the daily habit, and the milestone that made it worth it.">
+      <Section n="05" wide id="moments" title="Moments" blurb="A few moments from the journey so far — the beginning, the teamwork, the daily habit, and the milestone that made it worth it.">
         <div className="grid items-stretch gap-6 sm:grid-cols-2 lg:grid-cols-4">
           {moments.map((m, i) => (
             <Reveal key={m.title} delay={i * 90} className="h-full">
