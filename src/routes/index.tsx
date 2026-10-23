@@ -6,9 +6,9 @@ export const Route = createFileRoute("/")({
   head: () => ({
     meta: [
       { title: "Gowri Nandyala — Python Full Stack Developer" },
-      { name: "description", content: "Portfolio of Nandyala Lakshmi Satya Siva Gowri — aspiring Python Full Stack Developer and AI/ML student, with projects, skills, education and moments." },
+      { name: "description", content: "Portfolio of Nandyala Lakshmi Satya Siva Gowri — aspiring Python Full Stack Developer and AI/ML student, with projects, skills, education and certifications." },
       { property: "og:title", content: "Gowri Nandyala — Python Full Stack Developer" },
-      { property: "og:description", content: "Projects, skills, education, certifications and moments from the journey of Gowri Nandyala." },
+      { property: "og:description", content: "Projects, skills, education, certifications from the journey of Gowri Nandyala." },
       { property: "og:type", content: "website" },
       { name: "twitter:card", content: "summary_large_image" },
     ],
