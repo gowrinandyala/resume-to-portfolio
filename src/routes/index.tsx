@@ -161,7 +161,7 @@ function Index() {
       <div className="marquee overflow-hidden border-y border-border py-3" aria-hidden="true">
         <div className="marquee-track">
           {[0, 1].map((k) => (
-            <div key={k} className="flex shrink-0 items-center gap-7 pr-7 text-xs uppercase tracking-[0.22em] text-muted-foreground">
+            <div key={k} className="flex shrink-0 items-center gap-7 pr-7 text-xs uppercase tracking-[0.22em] text-foreground/70">
               {ticker.map((t) => (
                 <span key={t} className="flex items-center gap-7">
                   {t}

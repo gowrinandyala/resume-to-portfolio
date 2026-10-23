@@ -1,5 +1,5 @@
 # Roadmap
 
 - [x] Make the overall page more attractive: richer layout, motion, and detail
-- [ ] Remove the Moments section entirely
-- [ ] Verify build + visual check in the preview
+- [x] Remove the Moments section entirely
+- [x] Verify build + visual check in the preview
