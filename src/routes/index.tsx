@@ -123,14 +123,27 @@ function Reveal({ children, delay = 0, className = "" }: { children: ReactNode; 
   );
 }
 
-function Section({ n, title, id, blurb, children }: { n: string; title: string; id?: string; blurb?: string; children: ReactNode }) {
+function Section({ n, title, id, blurb, wide, children }: { n: string; title: string; id?: string; blurb?: string; wide?: boolean; children: ReactNode }) {
+  const head = (
+    <div className={wide ? "" : "md:sticky md:top-24 md:self-start"}>
+      <span className="font-display text-sm text-primary">{n}</span>
+      <h2 className="mt-2 text-3xl md:text-4xl">{title}</h2>
+      {blurb && <p className="mt-3 max-w-md text-sm leading-relaxed text-muted-foreground">{blurb}</p>}
+    </div>
+  );
+
+  if (wide) {
+    return (
+      <section id={id} className="scroll-mt-24 border-t border-border py-20">
+        {head}
+        <div className="mt-12">{children}</div>
+      </section>
+    );
+  }
+
   return (
     <section id={id} className="scroll-mt-24 grid gap-10 border-t border-border py-20 md:grid-cols-[220px_1fr] md:gap-16">
-      <div className="md:sticky md:top-24 md:self-start">
-        <span className="font-display text-sm text-primary">{n}</span>
-        <h2 className="mt-2 text-3xl md:text-4xl">{title}</h2>
-        {blurb && <p className="mt-3 text-sm leading-relaxed text-muted-foreground">{blurb}</p>}
-      </div>
+      {head}
       <div>{children}</div>
     </section>
   );
