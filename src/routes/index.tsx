@@ -69,8 +69,8 @@ const moments = [
     note: "Sticky notes, half-finished diagrams, and a team that kept showing up.",
     when: "2025",
     tilt: "rotate-2",
-    shift: "lg:translate-y-10",
-    ratio: "aspect-[5/4]",
+    shift: "lg:translate-y-8",
+    ratio: "aspect-[4/5]",
   },
   {
     src: momentChai,
@@ -80,7 +80,7 @@ const moments = [
     note: "Most lines were written at this table, one cup at a time.",
     when: "Every day",
     tilt: "rotate-1",
-    shift: "lg:translate-y-4",
+    shift: "lg:translate-y-3",
     ratio: "aspect-[4/5]",
   },
   {
@@ -91,8 +91,8 @@ const moments = [
     note: "The kind of evening that makes the late nights make sense.",
     when: "2026",
     tilt: "-rotate-1",
-    shift: "lg:translate-y-14",
-    ratio: "aspect-[5/4]",
+    shift: "lg:translate-y-10",
+    ratio: "aspect-[4/5]",
   },
 ];
 
