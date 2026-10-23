@@ -55,7 +55,7 @@ const moments = [
     w: 1024,
     h: 1280,
     title: "Where it started",
-    note: "A sunlit classroom, a laptop, and notes that never stopped filling up.",
+    note: "A sunlit classroom and a laptop that never closed.",
     when: "2023",
     tilt: "-rotate-2",
     shift: "lg:translate-y-0",
@@ -66,7 +66,7 @@ const moments = [
     w: 1280,
     h: 1024,
     title: "The whiteboard years",
-    note: "Sticky notes, half-finished diagrams, and a team that kept showing up.",
+    note: "Sticky notes, diagrams, and a team that showed up.",
     when: "2025",
     tilt: "rotate-2",
     shift: "lg:translate-y-8",
@@ -77,7 +77,7 @@ const moments = [
     w: 1024,
     h: 1280,
     title: "Chai & code",
-    note: "Most lines were written at this table, one cup at a time.",
+    note: "Most lines written here, one cup at a time.",
     when: "Every day",
     tilt: "rotate-1",
     shift: "lg:translate-y-3",
@@ -88,7 +88,7 @@ const moments = [
     w: 1280,
     h: 1024,
     title: "Caps in the air",
-    note: "The kind of evening that makes the late nights make sense.",
+    note: "The evening that made the late nights make sense.",
     when: "2026",
     tilt: "-rotate-1",
     shift: "lg:translate-y-10",
@@ -141,7 +141,7 @@ function Index() {
     <main className="mx-auto max-w-6xl px-6">
       <div className="grain" aria-hidden="true" />
 
-      <nav className="sticky top-0 z-40 -mx-6 border-b border-border/70 bg-background/85 px-6 py-3 backdrop-blur-md">
+      <nav className="sticky top-0 z-40 -mx-6 border-b border-border/70 bg-background/92 px-6 py-3 backdrop-blur-md">
         <div className="flex items-center justify-between text-sm">
           <a href="#top" className="font-display text-lg tracking-tight">Gowri<span className="text-primary">.</span></a>
           <div className="hidden items-center gap-8 text-muted-foreground md:flex">
@@ -300,7 +300,7 @@ function Index() {
         </ul>
       </Section>
 
-      <Section n="05" id="moments" title="Moments" blurb="A few frames from the journey so far — the studying, the teamwork, and the small rituals in between.">
+      <Section n="05" wide id="moments" title="Moments" blurb="A few frames from the journey so far — the studying, the teamwork, and the small rituals in between.">
         <div className="grid items-start gap-10 sm:grid-cols-2 lg:grid-cols-4">
           {moments.map((m, i) => (
             <Reveal key={m.title} delay={i * 90}>
@@ -317,7 +317,7 @@ function Index() {
                 </div>
                 <figcaption className="px-1 pb-4 pt-3">
                   <p className="font-display text-lg leading-tight">{m.title}</p>
-                  <p className="mt-1 text-xs leading-relaxed text-muted-foreground">{m.note}</p>
+                  <p className="mt-1 min-h-[3.75rem] text-xs leading-relaxed text-muted-foreground">{m.note}</p>
                   <p className="mt-2 text-[11px] uppercase tracking-[0.16em] text-primary">{m.when}</p>
                 </figcaption>
               </figure>
