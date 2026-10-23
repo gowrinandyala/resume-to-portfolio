@@ -65,7 +65,7 @@ function Index() {
         <div className="animate-rise mt-10 flex flex-wrap gap-3 text-sm" style={{ animationDelay: "0.3s" }}>
           <a href="mailto:nandyalagowri@gmail.com" className="inline-flex items-center gap-2 rounded-full bg-primary px-5 py-2.5 text-primary-foreground transition hover:opacity-90"><Mail className="h-4 w-4" /> nandyalagowri@gmail.com</a>
           <a href="tel:8688650155" className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5"><Phone className="h-4 w-4" /> 8688650155</a>
-          <a href="https://www.linkedin.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5"><Linkedin className="h-4 w-4" /> LinkedIn</a>
+          <a href="https://www.linkedin.com/in/gowri-nandyala-197834322" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5"><Linkedin className="h-4 w-4" /> LinkedIn</a>
           <a href="https://github.com" target="_blank" rel="noreferrer" className="inline-flex items-center gap-2 rounded-full bg-secondary px-5 py-2.5"><Github className="h-4 w-4" /> GitHub</a>
         </div>
       </header>
